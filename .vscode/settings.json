@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "db.sqlite3",
+            "dialect": "SQLite",
+            "name": "my_site_sql_lite"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
