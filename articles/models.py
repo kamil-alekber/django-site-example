@@ -9,6 +9,8 @@ class Article(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    col_test = models.CharField(default="", max_length=100)
+    # when removing the existing row that is filled with the info it is gonna be lost when migrating
     # add thumbnail
     # author
 
