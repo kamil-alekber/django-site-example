@@ -1,11 +1,12 @@
 {
-    "sqltools.connections": [
-        {
-            "database": "db.sqlite3",
-            "dialect": "SQLite",
-            "name": "my_site_sql_lite"
-        }
-    ],
-    "sqltools.useNodeRuntime": true,
-    "python.pythonPath": "/usr/bin/python3.6"
+  "sqltools.connections": [
+    {
+      "database": "db.sqlite3",
+      "dialect": "SQLite",
+      "name": "my_site_sql_lite"
+    }
+  ],
+  "sqltools.useNodeRuntime": true,
+  "python.pythonPath": "/usr/bin/python3.6",
+  "python.linting.pylintArgs": ["--load-plugins=pylint_django", "--errors-only"]
 }
