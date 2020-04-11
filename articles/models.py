@@ -18,3 +18,8 @@ class Article(models.Model):
     # and it changed it in the admin section
     def __str__(self):
         return self.title
+
+    # model to cut down the body of a blog
+
+    def snippet(self):
+        return self.body[:50]
