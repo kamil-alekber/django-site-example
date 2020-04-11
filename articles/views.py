@@ -8,6 +8,6 @@ def article_list(request):
 
 
 def article(request, slug):
-    print(slug, 'slug')
-    # articles = Article.objects.all().order_by('date')
-    return render(request, 'articles/article.html')
+    print(f'[slug] => {slug}')
+    article = Article.objects.get(slug=slug)
+    return render(request, 'articles/article.html', {'article': article})

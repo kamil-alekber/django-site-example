@@ -9,6 +9,14 @@
   </head>
   <body>
     <div class="wrapper">
+      <h1>
+        <!-- looks at the articles app => /article url -->
+        <a href="{% url 'articles:article_list'%}"
+          ><img src="{% static 'logo.png'%}" alt="logo"
+        /></a>
+      </h1>
+      <br />
+      <br />
       {% block content%} {% endblock%}
     </div>
   </body>
