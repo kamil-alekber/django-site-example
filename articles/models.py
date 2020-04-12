@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 # inherit from models.model
 
@@ -13,7 +13,7 @@ class Article(models.Model):
     # when removing the existing row that is filled with the info it is gonna be lost when migrating
     # can be null blank=True
     thumb = models.ImageField(default="default.png", blank=True)
-    # author
+    author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
 
     # instead of Article: object Article shows title
     # and it changed it in the admin section
