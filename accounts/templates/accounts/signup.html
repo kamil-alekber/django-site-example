@@ -2,7 +2,7 @@
 
 <div>
   <h2>sign up for the blog site</h2>
-  <form action="/accounts/signup/" method="POST" class="site-form">
+  <form action="{% url 'accounts:signup'%}" method="POST" class="site-form">
     {%csrf_token%} {{ form }}
     <button type="submit">Signup</button>
   </form>
