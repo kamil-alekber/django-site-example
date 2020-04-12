@@ -123,3 +123,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
 )
+
+# uploading meadia
+
+MEDIA_URL = '/media/'
+
+# what folder to upload to
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

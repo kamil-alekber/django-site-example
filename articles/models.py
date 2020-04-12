@@ -11,7 +11,8 @@ class Article(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     col_test = models.CharField(default="", max_length=100)
     # when removing the existing row that is filled with the info it is gonna be lost when migrating
-    # add thumbnail
+    # can be null blank=True
+    thumb = models.ImageField(default="default.png", blank=True)
     # author
 
     # instead of Article: object Article shows title
