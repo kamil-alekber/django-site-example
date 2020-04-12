@@ -22,6 +22,9 @@ def article_create(request):
         form = forms.CreateArticleForm(request.POST, request.FILES)
         if form.is_valid():
             # save article to db
+            article_instance = form.save(commit=False)
+            article_instance.author = request.user
+            article_instance.save()
             return redirect('articles:article_list')
     else:
         form = forms.CreateArticleForm()
